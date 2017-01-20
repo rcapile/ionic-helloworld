@@ -14,7 +14,7 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AddTodoComponent {
 
-  todo:any;
+  todo: any;
 
   form: FormGroup;
 
@@ -38,7 +38,7 @@ export class AddTodoComponent {
   }
 
   done() {
-    if(!this.form.valid) { return; }
+    if (!this.form.valid) { return; }
     this.viewCtrl.dismiss(this.form.value);
   }
 }

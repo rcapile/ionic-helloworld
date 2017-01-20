@@ -23,6 +23,13 @@ export class TodoService {
                    .map(result => result.json())
                    .catch((error:any) => Observable.throw(errorObject.json.error));
  }
+ createTodo(todo):Observable<any>
+ {
+   console.log('Create TodoService Provider');
+   return this.http.put('http://localhost:3000/todos', todo)
+                   .map(result => result.json())
+                   .catch((error:any) => Observable.throw(errorObject.json.error));
+}
   get() {
     return [
       {text:'Task 1'},

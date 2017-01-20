@@ -39,6 +39,7 @@ export class HomePage {
     let addModal = this.Modal.create(AddTodoComponent);
     addModal.onDidDismiss(todo => {
       console.log(todo);
+      console.log(this.TodoService.createTodo(todo));
     })
     addModal.present();
   }
